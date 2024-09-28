@@ -12,7 +12,7 @@ const oldTasks = localStorage.getItem("tasks");
 
 const App = () => {
 
-  const [tasks,setTasks] = useState(JSON.parse(oldTasks));
+  const [tasks,setTasks] = useState(JSON.parse(oldTasks)||[]);
 
   useEffect(()=>{
     localStorage.setItem("tasks", JSON.stringify(tasks));
